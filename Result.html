@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Game</title>
+    <link rel="icon" href="./img/Kingofspade.jpg">
+   <!-- Bootstrap CSS -->
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+   integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+   crossorigin="anonymous"></script>
+       <!-- Bootstrap Javascript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+   integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+   crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: linear-gradient(to right top, #160f13, #1d171d, #241e27, #292632, #2d2e3d, #2a3141, #273544, #233847, #1b3642, #15353c, #113235, #11302e);
+            margin: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            color: white;
+        }
+
+        .mndv {
+            margin-top: 3rem;
+        }
+        @media (max-width: 450px) {
+            .mndv {
+            margin-top: 1.5rem;
+        }
+        }
+        .row{
+            --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+        }
+        @media (min-width: 450px) {
+            .row{
+            --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap:nowrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+        }
+}
+
+        .container1 {
+            text-align: center;
+            margin-top: 5%;
+            border: 2px solid #1d2525;
+        }
+
+        .bdr {
+            height: 65%;
+            width: 49%;
+            border: 2px solid #445050;
+        }
+        @media (max-width: 450px) {
+            .bdr {
+            height: 65%;
+            width: fit-content;
+            margin-left: 2%;
+            margin-top: 8%;
+            border: 2px solid #445050;
+        }
+}
+
+
+        .crdhw {
+            height: 40%;
+            width: 20%;
+            margin-left: 8%;
+        }
+        .mrgn {
+            margin-top: 15%;
+            margin-left: 36%;
+            margin-bottom: 10%;
+
+        }
+
+        .mrgn1 {
+            margin-top: 5%;
+            margin-bottom: 5%;
+            text-align: center;
+
+        }
+
+        .btnslt {
+            height: 35px;
+            width:30%;
+            color: wheat;
+            background-color: #0b252b;
+            border: 4px solid #0b857f;
+        }
+        @media (max-width: 450px) {
+        .btnslt {
+            height: 15%;
+            width: 45%;
+            color: wheat;
+            background-color: #0b252b;
+            border: 4px solid #0b857f;
+        }
+    }
+    .flp1{
+        transform: rotateY('180deg');
+    }
+    @keyframes spn1-flp1 {
+        0%{
+            transform: rotateY('0deg');
+        }
+        100%{
+            transform: rotateY('180deg');
+        }
+        
+    }
+
+    .flp2{
+        transform: rotateY('180deg');
+    }
+    @keyframes spn1-flp2 {
+        0%{
+            transform: rotateY('0deg');
+        }
+        100%{
+            transform: rotateY('180deg');
+        }
+        
+    }
+    </style>
+</head>
+
+<body>
+                <div class="container mndv">
+                    <div class="row">
+
+                    <div class="bdr col-md-6">
+
+                        <div class="container1">
+
+                            <h1>Player 1</h1>
+                        </div>
+                        <div class="mrgn">
+                            <img class="crdhw flp1" id="image" src="./img/Crdbck.jpg" alt="Card Back Side">
+                        </div>
+                        <div class="mrgn1"><input class="btnslt" onclick="show()" type="button" value="Show Card"></div>
+                    </div>
+
+
+                    <div class="bdr col-md-6">
+
+                        <div class="container1">
+
+                            <h1>Player 2</h1>
+                        </div>
+                        <div class="mrgn">
+                            <img class="crdhw flp2" id="image1" src="./img/Crdbck.jpg" alt="Card Back Side">
+                        </div>
+                        <div class="mrgn1"><input class="btnslt" onclick="show1()" type="button" value="Show Card"></div>
+                    </div>
+
+                </div>
+                
+                <div class="mrgn1" id="result"><span class="btnslt">Result : </span></div>
+
+
+            </div>
+        
+</body>
+<script>
+//     function cmp{
+
+    
+//         if(show > show1){
+//             document.getElementById("result").innerHTML = "Player 1 Wins";
+//         }
+//         else if(show == show1){
+//             document.getElementById("result").innerHTML = "Match Draw";
+//         }
+//         else{
+//             document.getElementById("result").innerHTML = "Player 2 Wins";
+//         }
+
+// }
+
+
+
+
+    function show() {
+        let image;
+        var num = Math.floor(Math.random() * 3);
+        if (num == 1) {
+            image = document.getElementById("image");
+            image.src =
+                "./img/1kingofspade.jpg"
+        }
+        else if (num == 2) {
+            image = document.getElementById("image");
+            image.src =
+                "./img/2Queenofspade.jpg"
+        }
+        else {
+            image = document.getElementById("image");
+            image.src =
+                "./img/3Jackofspade.jpg"
+        }
+    }
+
+    function show1() {
+        let image;
+        var num1 = Math.floor(Math.random() * 3);
+        if (num1 == 1) {
+            image = document.getElementById("image1");
+            image.src =
+                "./img/1kingofspade.jpg"
+        }
+        else if (num1 == 2) {
+            image = document.getElementById("image1");
+            image.src =
+                "./img/2Queenofspade.jpg"
+        }
+        else {
+            image = document.getElementById("image1");
+            image.src =
+                "./img/3Jackofspade.jpg"
+        }
+    }
+
+
+
+</script>
+
+</html>

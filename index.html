@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Cards Game</title>
+    <link rel="icon" href="./img/Kingofspade.jpg">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6bb5208a7a.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    body {
+        margin: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        background-image: linear-gradient(to right top, #2e244c, #39355d, #45476e, #52597f, #606c90, #5e7292, #5d7794, #5d7c95, #507587, #476d77, #426568, #3f5c5a);
+        background-repeat: no-repeat;
+    }
+
+    .boxdv {
+        background-image: linear-gradient(to left bottom, #000000, #131213, #1f1d1f, #2a292c, #353539, #37393e, #393d44, #3a4249, #333f46, #2b3d42, #243a3c, #1f3736);
+        border: 2px solid rgb(148, 138, 138);
+    }
+
+    .imghwp {
+        height: 60%;
+        width: 30%;
+    }
+
+    .pbtn {
+        width: 40%;
+        height: 18%;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        border: 2px solid #252323;
+        background-image: linear-gradient(to left bottom, #000000, #131213, #1f1d1f, #2a292c, #353539, #37393e, #393d44, #3a4249, #333f46, #2b3d42, #243a3c, #1f3736);
+    }
+
+    .plbtn{
+        height: 35px;
+        margin-top: 10%;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        border: 2px solid #252323;
+        border-radius: 5px;
+        background-image: linear-gradient(to right, #051937, #003d5c, #006269, #02855a, #83a142);
+    }
+
+    .imgmn {
+        width: 60%;
+        margin-top: 8%;
+        margin-bottom: 5%;
+    }
+    .mt-dv{
+        margin-top: 1.5rem;
+    }
+    @media (max-width: 450px) {
+        .mt-dv {
+            margin-top: 3rem;
+  }
+}
+</style>
+
+<body>
+    <h1 class="text-center">Face Cards Game For 2 Player</h1>
+    <div class="container boxdv mb-5">
+
+        <div class="row p-4">
+
+            <div class="col-sm-12 col-md-6 mt-4">
+                <img class="imghwp" src="./img/Player.png"><br>
+                <input class="pbtn mt-5" type="text" id="pone" value="Player 1">
+            </div>
+
+            <div class="col-sm-12 col-md-6 mt-dv">
+                <img class="imghwp" src="./img/Player.png"><br>
+                <input class="pbtn mt-5 " type="text" id="pone" value="Player 2">
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <a href="./game.html"><input class="plbtn" type="button" value="Enter The Game"></a>
+                </div>
+                <div class="col-12 mt-4">
+                <img class="imgmn" src="./img/Face Cards.jpg" alt="Image of Face Cards">
+                </div>
+            </div>
+
+</body>
+
+</html>
