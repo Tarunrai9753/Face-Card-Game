@@ -168,34 +168,20 @@
 
                 </div>
                 
-                <div class="mrgn1" id="result"><span class="btnslt">Result : </span></div>
+                <div class="mrgn1" id="result"> <input class="btnslt" type="button" onclick="win()" value="Result"></div>
 
 
             </div>
         
 </body>
 <script>
-//     function cmp{
-
-    
-//         if(show > show1){
-//             document.getElementById("result").innerHTML = "Player 1 Wins";
-//         }
-//         else if(show == show1){
-//             document.getElementById("result").innerHTML = "Match Draw";
-//         }
-//         else{
-//             document.getElementById("result").innerHTML = "Player 2 Wins";
-//         }
-
-// }
 
 
-
+var num = Math.floor(Math.random() * 3);
+var num1 = Math.floor(Math.random() * 3);
 
     function show() {
         let image;
-        var num = Math.floor(Math.random() * 3);
         if (num == 1) {
             image = document.getElementById("image");
             image.src =
@@ -214,8 +200,7 @@
     }
 
     function show1() {
-        let image;
-        var num1 = Math.floor(Math.random() * 3);
+       let image;
         if (num1 == 1) {
             image = document.getElementById("image1");
             image.src =
@@ -230,6 +215,17 @@
             image = document.getElementById("image1");
             image.src =
                 "./img/3Jackofspade.jpg"
+        }
+    }
+    function win() {
+        if(num > num1){
+            document.getElementById("result").innerHTML = "Player 1 is the Winner.";
+        }
+        else if(num == num1){
+            document.getElementById("result").innerHTML = "Match Draw.";
+        }
+        else{
+            document.getElementById("result").innerHTML = "Player 2 is the Winner.";
         }
     }
 
